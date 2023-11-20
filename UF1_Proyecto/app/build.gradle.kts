@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.uf1_proyecto"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.uf1_proyecto"
@@ -37,6 +37,8 @@ android {
 
 dependencies {
 
+    //Import de los charts
+    implementation("com.github.AAChartModel:AAChartCore-Kotlin:7.2.1")
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")
