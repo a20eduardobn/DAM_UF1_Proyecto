@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">UF1_Proyecto</string>
+    <string name="balance_mensual">Balance Mensual</string>
+    <string name="gastos_ingresos">Gastos e Ingresos</string>
 </resources>
