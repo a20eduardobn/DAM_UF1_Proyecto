@@ -4,7 +4,8 @@
     <color name="white">#FFFFFFFF</color>
 
     <!-- Color Primario (Azul) -->
-    <color name="primary_color">#3498db</color>
+    <color name="colorPrimary">#3498db</color>
+    <color name="colorPrimaryDark">#2D80B8</color>
 
     <!-- Colores para acentuar -->
     <color name="accent_color_orange">#e67e22</color>

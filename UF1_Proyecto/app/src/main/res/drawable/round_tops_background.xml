@@ -4,5 +4,5 @@
     <!-- Color del fondo -->
     <solid android:color="@color/white" />
     <!-- Radio del borde -->
-    <corners android:topLeftRadius="10dp" android:topRightRadius="10dp"/>
+    <corners android:topLeftRadius="20dp" android:topRightRadius="20dp"/>
 </shape>
