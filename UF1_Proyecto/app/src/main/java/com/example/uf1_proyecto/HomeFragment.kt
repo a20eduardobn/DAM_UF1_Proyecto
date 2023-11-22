@@ -48,7 +48,7 @@ class HomeFragment : Fragment() {
 
         //Creando el chart junto a su modelo de datos
         val chartModel : AAChartModel = AAChartModel()
-            .chartType(AAChartType.Pie)
+            .chartType(AAChartType.Bar)
             .title(getString(R.string.balance_mensual))
             .titleStyle(
                 AAStyle()
