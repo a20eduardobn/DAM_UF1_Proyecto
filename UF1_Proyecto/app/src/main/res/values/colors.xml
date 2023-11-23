@@ -7,13 +7,17 @@
     <color name="colorPrimary">#3498db</color>
     <color name="colorPrimaryDark">#2D80B8</color>
 
+    <!-- Color para el tema (parte superior)-->
+    <color name="colorTheme">#1F618D</color>
+
     <!-- Colores para acentuar -->
-    <color name="accent_color_orange">#e67e22</color>
-    <color name="accent_color_yellow">#f39c12</color>
+    <color name="accent_color_primary">#f39c12</color>
+    <color name="accent_color_secondary">#e67e22</color>
 
     <!-- Colores de fondo-->
     <color name="background_light_gray">#ecf0f1</color>
     <color name="background_dark_gray">#bdc3c7</color>
+
 
     <!-- Color para los ingresos -->
     <color name="chart_color_green">#2ecc71</color>

@@ -3,8 +3,7 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,78 +19,86 @@
                 android:id="@+id/mainChartView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp"
                 />
         </LinearLayout>
 
-        <!-- Este es el layout que se va a repetir, contiene cada entrada de los datos -->
-        <LinearLayout
+
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/round_tops_background"
-            android:orientation="vertical"
-            >
+            android:fillViewport="true"
+            android:background="@drawable/round_tops_background">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:background="@drawable/round_background_gray"
-                android:padding="16dp"
-                >
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
 
-                <!-- Icono a la izquierda -->
-                <ImageView
-                    android:id="@+id/iconImageView"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginEnd="8dp"
-                    android:src="@drawable/ic_launcher_foreground"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.5" />
-
-                <!-- Texto principal -->
-                <TextView
-                    android:id="@+id/mainTextView"
-                    android:layout_width="0dp"
+                <!-- Este es el layout que se va a repetir, contiene cada entrada de los datos -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:text="Texto Principal"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toStartOf="@+id/amountTextView"
-                    app:layout_constraintStart_toEndOf="@+id/iconImageView"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:layout_margin="20dp"
+                    android:background="@drawable/round_background_gray"
+                    android:padding="16dp">
 
-                <!-- Texto secundario -->
-                <TextView
-                    android:id="@+id/secondaryTextView"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:text="Texto Secundario"
-                    android:textSize="12sp"
-                    app:layout_constraintEnd_toStartOf="@+id/amountTextView"
-                    app:layout_constraintStart_toEndOf="@+id/iconImageView"
-                    app:layout_constraintTop_toBottomOf="@+id/mainTextView" />
+                    <!-- Icono a la izquierda -->
+                    <ImageView
+                        android:id="@+id/iconImageView"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="5dp"
+                        android:src="@drawable/ic_house"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.5" />
 
-                <!-- Importe monetario a la derecha -->
-                <TextView
-                    android:id="@+id/amountTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:text="$100.00"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </LinearLayout>
+                    <!-- Texto principal -->
+                    <TextView
+                        android:id="@+id/mainTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Texto Principal"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@+id/amountTextView"
+                        app:layout_constraintStart_toEndOf="@+id/iconImageView"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!-- Texto secundario -->
+                    <TextView
+                        android:id="@+id/secondaryTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Texto Secundario"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toStartOf="@+id/amountTextView"
+                        app:layout_constraintStart_toEndOf="@+id/iconImageView"
+                        app:layout_constraintTop_toBottomOf="@+id/mainTextView" />
+
+                    <!-- Importe monetario a la derecha -->
+                    <TextView
+                        android:id="@+id/amountTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="$100.00"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -101,7 +108,7 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
         android:src="@android:drawable/ic_menu_add"
-        app:backgroundTint="@color/accent_color_orange"
+        app:backgroundTint="@color/accent_color_secondary"
         app:fabSize="normal" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
