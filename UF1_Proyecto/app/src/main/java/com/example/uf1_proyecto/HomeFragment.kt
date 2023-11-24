@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
@@ -18,12 +17,11 @@ class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        (activity as AppCompatActivity?)!!.supportActionBar!!.title =
-            getString(R.string.monthly_balance_text)
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val view = binding.root
         binding.fab.setOnClickListener {
@@ -44,7 +42,7 @@ class HomeFragment : Fragment() {
         //Convertir los colores de colors.xml a strings para poder usarlos en el chart
         val colorPrimary = "#" + Integer.toHexString(
             ContextCompat.getColor
-                (requireContext(), R.color.colorPrimary)
+                (requireContext(), R.color.colorPrimaryLight)
         ).substring(2)
         val colorAccentPrimary = "#" + Integer.toHexString(
             ContextCompat.getColor

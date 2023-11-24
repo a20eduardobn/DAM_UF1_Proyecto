@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
 
         //Se añade el toolbar de la parte superior
         setSupportActionBar(binding.toolbar)
+
         val navhostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController = navhostFragment.navController
 
@@ -30,7 +31,8 @@ class MainActivity : AppCompatActivity() {
         val configurationApp = builderApp.build()
 
         binding.toolbar.setupWithNavController(navController, configurationApp)
-
+        //Se actualiza el titulo del toolbar para evitar que se muestre el nombre de la aplicacion
+        supportActionBar?.title = getString(R.string.monthly_balance_text)
     }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_toolbar, menu)

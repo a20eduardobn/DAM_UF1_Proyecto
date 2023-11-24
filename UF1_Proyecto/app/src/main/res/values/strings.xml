@@ -7,7 +7,7 @@
 
     <string name="hint_expense_name">Nombre del gasto</string>
     <string name="hint_expense_description">Descripción</string>
-    <string name="hint_expense_amount">Cantidad</string>
+    <string name="hint_expense_amount">Importe</string>
 
     <string name="label_chip_shopping">Compras</string>
     <string name="label_chip_house">Vivienda</string>

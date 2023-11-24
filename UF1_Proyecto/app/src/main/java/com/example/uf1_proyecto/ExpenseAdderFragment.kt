@@ -6,15 +6,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import com.example.uf1_proyecto.databinding.FragmentExpenseAdderBinding
+import com.example.uf1_proyecto.databinding.FragmentHomeBinding
 
 class ExpenseAdderFragment : Fragment() {
+    private var _binding: FragmentExpenseAdderBinding? = null
+    private val binding get() = _binding!!
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        (activity as AppCompatActivity?)!!.supportActionBar!!.title =
-            getString(R.string.expense_add_text)
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_expense_adder, container, false)
+        _binding = FragmentExpenseAdderBinding.inflate(inflater, container, false)
+        val view = binding.root
+
+        // Devolver la vista
+        return view
     }
 }

@@ -1,108 +1,113 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:orientation="vertical">
 
-    <ScrollView
+    <!-- Expense Entry -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true">
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/round_background_gray"
+        android:orientation="vertical"
+        android:padding="16dp">
 
+        <!-- Nombre para el gasto -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nameEditTextExpense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_expense_name"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Descripcion del gasto -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/descriptionEditTextExpense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_expense_description"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Importe -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/amountEditTextExpense"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_expense_amount"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- ChipGroup for Expense Type -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:orientation="vertical">
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-            <!-- Expense Entry -->
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupExpenseType"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:background="@drawable/round_background_gray"
-                android:padding="16dp">
-
-                <!-- Make this single lined -->
-                <EditText
-                    android:id="@+id/nameEditTextExpense"
-                    android:layout_width="0dp"
+                app:singleSelection="true">
+                <!-- Shopping Expense Type -->
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipShopping"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="@string/hint_expense_name"
-                    android:inputType="text"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:text="@string/label_chip_shopping"
+                    android:textSize="13sp" />
 
-                <EditText
-                    android:id="@+id/descriptionEditTextExpense"
-                    android:layout_width="0dp"
+                <!-- House Expense Type -->
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipHouse"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:hint="@string/hint_expense_description"
-                    android:inputType="text"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/nameEditTextExpense" />
+                    android:text="@string/label_chip_house"
+                    android:textSize="13sp" />
 
-                <EditText
-                    android:id="@+id/amountEditTextExpense"
-                    android:layout_width="0dp"
+                <!-- Vehicle Expense Type -->
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipVehicle"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:hint="@string/hint_expense_amount"
-                    android:inputType="numberDecimal"
-                    app:layout_constraintBottom_toTopOf="@+id/chipGroupExpenseType"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/descriptionEditTextExpense" />
+                    android:text="@string/label_chip_vehicle"
+                    android:textSize="13sp" />
 
-                <!-- ChipGroup for Expense Type -->
-                <com.google.android.material.chip.ChipGroup
-                    android:id="@+id/chipGroupExpenseType"
-                    android:layout_width="0dp"
+                <!-- Other Expense Type -->
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipOther"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/amountEditTextExpense"
-                    app:singleSelection="true">
-
-                    <!-- Shopping Expense Type -->
-                    <com.google.android.material.chip.Chip
-                        android:id="@+id/chipShopping"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/label_chip_shopping" />
-
-                    <!-- House Expense Type -->
-                    <com.google.android.material.chip.Chip
-                        android:id="@+id/chipHouse"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/label_chip_house" />
-
-                    <!-- Vehicle Expense Type -->
-                    <com.google.android.material.chip.Chip
-                        android:id="@+id/chipVehicle"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/label_chip_vehicle" />
-
-                    <!-- Other Expense Type -->
-                    <com.google.android.material.chip.Chip
-                        android:id="@+id/chipOther"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/label_chip_other" />
-                </com.google.android.material.chip.ChipGroup>
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                    android:text="@string/label_chip_other"
+                    android:textSize="13sp" />
+            </com.google.android.material.chip.ChipGroup>
         </LinearLayout>
-    </ScrollView>
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </LinearLayout>
+</LinearLayout>

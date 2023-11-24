@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryLight"
     >
 
     <LinearLayout
@@ -14,7 +15,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:background="@color/colorPrimary">
+            android:background="@color/colorPrimaryLight">
 
             <com.github.aachartmodel.aainfographics.aachartcreator.AAChartView
                 android:id="@+id/mainChartView"
@@ -109,7 +110,7 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
         android:src="@android:drawable/ic_menu_add"
-        app:backgroundTint="@color/accent_color_secondary"
+        app:backgroundTint="@color/accent_color_primaryDark"
         app:fabSize="normal" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
