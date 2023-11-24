@@ -1,7 +1,17 @@
 <resources>
     <string name="app_name">UF1_Proyecto</string>
-    <string name="balance_mensual">Balance Mensual</string>
-    <string name="gastosWord">Gastos</string>
-    <string name="ingresosWord">Ingresos</string>
+    <string name="monthly_balance_text">Balance Mensual</string>
+    <string name="expenseWord">Gastos</string>
+    <string name="incomeWord">Ingresos</string>
+    <string name="expense_add_text">Registrar Una Entrada</string>
+
+    <string name="hint_expense_name">Nombre del gasto</string>
+    <string name="hint_expense_description">Descripción</string>
+    <string name="hint_expense_amount">Cantidad</string>
+
+    <string name="label_chip_shopping">Compras</string>
+    <string name="label_chip_house">Vivienda</string>
+    <string name="label_chip_vehicle">Vehiculo</string>
+    <string name="label_chip_other">Otros</string>
 
 </resources>

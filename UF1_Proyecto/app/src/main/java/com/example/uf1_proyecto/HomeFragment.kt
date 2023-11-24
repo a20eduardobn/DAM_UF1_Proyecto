@@ -1,17 +1,18 @@
 package com.example.uf1_proyecto
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import com.example.uf1_proyecto.databinding.FragmentHomeBinding
-import com.github.aachartmodel.aainfographics.aachartcreator.AAChartFontWeightType
 import com.github.aachartmodel.aainfographics.aachartcreator.AAChartModel
 import com.github.aachartmodel.aainfographics.aachartcreator.AAChartType
 import com.github.aachartmodel.aainfographics.aachartcreator.AASeriesElement
-import com.github.aachartmodel.aainfographics.aaoptionsmodel.AAStyle
+
 
 class HomeFragment : Fragment() {
 
@@ -21,8 +22,15 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        (activity as AppCompatActivity?)!!.supportActionBar!!.title =
+            getString(R.string.monthly_balance_text)
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val view = binding.root
+        binding.fab.setOnClickListener {
+            //navigate to expense adder fragment using nav controller
+            view.findNavController().navigate(R.id.action_homeFragment_to_expenseAdderFragment)
+
+        }
 
         //Creando el chart a partir del modelo de datos
         binding.mainChartView.aa_drawChartWithChartModel(createChartModel())
@@ -51,7 +59,7 @@ class HomeFragment : Fragment() {
             .axesTextColor("#FFFFFF")
             .colorsTheme(arrayOf(colorAccentPrimary))
             .backgroundColor(colorPrimary)
-            .categories(arrayOf(getString(R.string.gastosWord), getString(R.string.ingresosWord)))
+            .categories(arrayOf(getString(R.string.expenseWord), getString(R.string.incomeWord)))
             .series(
                 arrayOf(
                     AASeriesElement()
