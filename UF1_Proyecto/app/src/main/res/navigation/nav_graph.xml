@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.uf1_proyecto.HomeFragment"
+        android:name="com.example.uf1_proyecto.GUI.HomeFragment"
         android:label="@string/monthly_balance_text" >
         <action
             android:id="@+id/action_homeFragment_to_expenseAdderFragment"
@@ -14,6 +14,6 @@
     </fragment>
     <fragment
         android:id="@+id/expenseAdderFragment"
-        android:name="com.example.uf1_proyecto.ExpenseAdderFragment"
+        android:name="com.example.uf1_proyecto.GUI.ExpenseAdderFragment"
         android:label="@string/expense_add_text" />
 </navigation>
