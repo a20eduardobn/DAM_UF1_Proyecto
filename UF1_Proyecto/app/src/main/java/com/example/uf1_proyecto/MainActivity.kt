@@ -41,7 +41,23 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val navController = findNavController(R.id.nav_host_fragment)
+        when (item.itemId) {
+            // Item del menu, que se muestra en el fragmento de añadir gastos
+            // y lanza la funcion de añadir gastos
+            R.id.menu_item_add -> {
+                launchFormSubmission()
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)
         return NavigationUI.onNavDestinationSelected(item, navController)
                 || super.onOptionsItemSelected(item)
+    }
+
+    override fun onPrepareOptionsMenu(menu: Menu): Boolean {
+        // Hide or show menu items based on the currently displayed fragment
+        val isExpenseAdderFragment: Boolean = findNavController(R.id.nav_host_fragment).currentDestination?.id == R.id.expenseAdderFragment
+        menu.findItem(R.id.menu_item_add).isVisible = isExpenseAdderFragment
+        return super.onPrepareOptionsMenu(menu)
     }
 }

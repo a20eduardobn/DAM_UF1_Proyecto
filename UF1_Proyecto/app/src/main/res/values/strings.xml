@@ -14,4 +14,6 @@
     <string name="label_chip_vehicle">Vehiculo</string>
     <string name="label_chip_other">Otros</string>
 
+    <string name="title_submit_form">Añadir</string>
+
 </resources>

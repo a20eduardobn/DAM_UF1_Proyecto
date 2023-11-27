@@ -111,6 +111,8 @@
         android:layout_margin="16dp"
         android:src="@android:drawable/ic_menu_add"
         app:backgroundTint="@color/accent_color_primaryDark"
-        app:fabSize="normal" />
+        app:fabSize="normal"
+        />
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
