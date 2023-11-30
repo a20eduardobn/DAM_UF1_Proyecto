@@ -49,7 +49,12 @@ dependencies {
     //Import de la libreria de Room
     implementation("androidx.room:room-runtime:2.6.0")
     annotationProcessor("androidx.room:room-compiler:2.6.0")
-    implementation ("androidx.room:room-ktx:2.4.0")
+    implementation ("androidx.room:room-ktx:2.6.0")
+    //Import de viewmodel
+    implementation ("androidx.lifecycle:lifecycle-viewmodel:2.6.2")
+    //Import de livedata
+    implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
+
 
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")

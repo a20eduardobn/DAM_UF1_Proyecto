@@ -17,7 +17,7 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <!-- Nombre para el gasto -->
+        <!-- Nombre para el ingreso -->
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
             android:layout_width="match_parent"
@@ -27,11 +27,11 @@
                 android:id="@+id/nameEditTextExpense"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/hint_expense_name"
+                android:hint="@string/hint_income_name"
                 android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- Descripcion del gasto -->
+        <!-- Descripcion del ingreso -->
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
             android:layout_width="match_parent"
@@ -60,57 +60,6 @@
                 android:hint="@string/hint_expense_amount"
                 android:inputType="numberDecimal" />
         </com.google.android.material.textfield.TextInputLayout>
-
-        <!-- ChipGroup para los tipos de gastos -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <com.google.android.material.chip.ChipGroup
-                android:id="@+id/chipGroupExpenseType"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:singleSelection="true">
-                <!-- Tipo de gasto compras -->
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/chipShopping"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/label_chip_shopping"
-                    android:textSize="13sp" />
-
-                <!-- Tipo de gasto vivienda -->
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/chipHouse"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/label_chip_house"
-                    android:textSize="13sp" />
-
-                <!-- Tipo de gasto vehiculo -->
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/chipVehicle"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/label_chip_vehicle"
-                    android:textSize="13sp" />
-
-                <!-- Tipo de gasto otros -->
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/chipOther"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/label_chip_other"
-                    android:textSize="13sp" />
-            </com.google.android.material.chip.ChipGroup>
-        </LinearLayout>
     </LinearLayout>
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabSendExpense"

@@ -6,8 +6,9 @@
     <string name="expense_add_text">Registrar Una Entrada</string>
 
     <string name="hint_expense_name">Nombre del gasto</string>
-    <string name="hint_expense_description">Descripción</string>
+    <string name="hint_description">Descripción</string>
     <string name="hint_expense_amount">Importe</string>
+    <string name="hint_income_name">Nombre del ingreso</string>
 
     <string name="label_chip_shopping">Compras</string>
     <string name="label_chip_house">Vivienda</string>
