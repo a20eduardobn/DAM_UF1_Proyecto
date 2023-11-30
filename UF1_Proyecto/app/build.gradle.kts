@@ -46,6 +46,11 @@ dependencies {
 
     //Import de los charts
     implementation("com.github.AAChartModel:AAChartCore-Kotlin:7.2.1")
+    //Import de la libreria de Room
+    implementation("androidx.room:room-runtime:2.6.0")
+    annotationProcessor("androidx.room:room-compiler:2.6.0")
+    implementation ("androidx.room:room-ktx:2.4.0")
+
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")

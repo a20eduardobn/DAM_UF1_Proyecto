@@ -1,20 +1,12 @@
-package com.example.uf1_proyecto.GUI
+package com.example.uf1_proyecto.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.core.content.ContextCompat
-import androidx.core.view.MenuHost
-import androidx.core.view.MenuProvider
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Lifecycle
 import androidx.navigation.findNavController
-import com.example.uf1_proyecto.Controller.Controller
 import com.example.uf1_proyecto.R
 import com.example.uf1_proyecto.databinding.FragmentHomeBinding
 import com.github.aachartmodel.aainfographics.aachartcreator.AAChartModel
