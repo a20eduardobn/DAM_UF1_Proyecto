@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import kotlinx.coroutines.CoroutineScope
 
 @Database(entities = [Registro::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
@@ -13,7 +14,7 @@ abstract class AppDatabase : RoomDatabase() {
         // Implementacion del patron Singleton para evitar multiples instancias de la BD
         @Volatile
         private var INSTANCE: AppDatabase? = null
-        fun getInstance(context: Context): AppDatabase {
+        fun getInstance(context: Context, scope: CoroutineScope): AppDatabase {
             //Comprobamos si la instancia es nula, si lo es la creamos
             return INSTANCE ?: synchronized(this) {
                 val instance = Room.databaseBuilder(

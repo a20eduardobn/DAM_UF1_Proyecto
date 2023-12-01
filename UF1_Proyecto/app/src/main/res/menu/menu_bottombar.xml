@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-  
+    <item
+        android:id="@+id/item_balance"
+        android:enabled="true"
+        android:icon="@drawable/ic_house"
+        android:title="@string/balanceWord"/>
+    <item
+        android:id="@+id/item_income"
+        android:enabled="true"
+        android:icon="@drawable/ic_house"
+        android:title="@string/incomeWord"/>
+    <item
+        android:id="@+id/item_expense"
+        android:enabled="true"
+        android:icon="@drawable/ic_house"
+        android:title="@string/expenseWord"/>
 </menu>

@@ -2,10 +2,17 @@ package com.example.uf1_proyecto
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.activity.OnBackPressedCallback
+import androidx.activity.viewModels
+import androidx.lifecycle.Observer
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.example.uf1_proyecto.databinding.ActivityMainBinding
+import com.example.uf1_proyecto.model.RegistrosAdapter
+import com.example.uf1_proyecto.model.RegistrosApplication
+import com.example.uf1_proyecto.model.RegistrosViewModel
+import com.example.uf1_proyecto.model.RegistrosViewModelFactory
 
 private lateinit var binding: ActivityMainBinding
 
@@ -27,7 +34,32 @@ class MainActivity : AppCompatActivity() {
         val configurationApp = builderApp.build()
 
         binding.toolbar.setupWithNavController(navController, configurationApp)
+
         //Se actualiza el titulo del toolbar para evitar que se muestre el nombre de la aplicacion
         supportActionBar?.title = getString(R.string.monthly_balance_text)
+
+        binding.bottomNavigation.setupWithNavController(navController)
+        binding.bottomNavigation.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.item_expense -> {
+                    navController.navigate(R.id.expenseFragment)
+                    true
+                }
+
+                R.id.item_income -> {
+                    navController.navigate(R.id.incomeFragment)
+                    true
+                }
+
+                R.id.item_balance -> {
+                    navController.navigate(R.id.homeFragment)
+                    true
+                }
+                else -> false
+            }
+        }
+
+
+
     }
 }

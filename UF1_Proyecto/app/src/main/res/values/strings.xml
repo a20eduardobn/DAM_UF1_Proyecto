@@ -3,6 +3,7 @@
     <string name="monthly_balance_text">Balance Mensual</string>
     <string name="expenseWord">Gastos</string>
     <string name="incomeWord">Ingresos</string>
+    <string name="balanceWord">Balance</string>
     <string name="expense_add_text">Registrar Una Entrada</string>
 
     <string name="hint_expense_name">Nombre del gasto</string>
@@ -16,6 +17,7 @@
     <string name="label_chip_other">Otros</string>
 
     <string name="toast_form_empty">Por favor, rellena todos los campos.</string>
+    <string name="toast_empty_notsaved">Error al guardar</string>
     <string name="btn_confirm">Confirmar</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
