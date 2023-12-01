@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0757ba0-5636-4d03-8ab1-d93d4b440013" name="Changes" comment="" />
+    <list default="true" id="c0757ba0-5636-4d03-8ab1-d93d4b440013" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/UF1_Proyecto/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/UF1_Proyecto/.idea/kotlinc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UF1_Proyecto/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/UF1_Proyecto/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UF1_Proyecto/app/src/main/java/com/example/uf1_proyecto/model/AppDatabase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/UF1_Proyecto/app/src/main/java/com/example/uf1_proyecto/model/AppDatabase.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UF1_Proyecto/app/src/main/java/com/example/uf1_proyecto/model/RegistrosApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/UF1_Proyecto/app/src/main/java/com/example/uf1_proyecto/model/RegistrosApplication.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UF1_Proyecto/app/src/main/java/com/example/uf1_proyecto/view/ExpenseAdderFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/UF1_Proyecto/app/src/main/java/com/example/uf1_proyecto/view/ExpenseAdderFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UF1_Proyecto/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/UF1_Proyecto/build.gradle.kts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,15 +28,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "cidr.known.project.marker": "true",
-    "last_opened_file_path": "C:/Users/showd_325vi59/Downloads/ProyectoPMDM/DAM_UF1_Proyecto/UF1_Proyecto"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/showd_325vi59/Downloads/ProyectoPMDM/DAM_UF1_Proyecto/UF1_Proyecto&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

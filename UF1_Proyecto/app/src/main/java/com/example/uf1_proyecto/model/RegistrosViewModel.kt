@@ -8,9 +8,10 @@ import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 
-class RegistrosViewModel(private val repository:RegistrosRepository) : ViewModel() {
+class RegistrosViewModel(private val repository: RegistrosRepository) : ViewModel() {
 
     val todosRegistros: LiveData<List<Registro>> = repository.todosRegistros.asLiveData()
+
 
     fun insertRegistry(name: String, description: String, amount: Double, category: String) {
         viewModelScope.launch {
@@ -26,7 +27,7 @@ class RegistrosViewModel(private val repository:RegistrosRepository) : ViewModel
     }
 }
 
-//Esto asegurará tener la instancia del ViewModel correcta
+// Esto asegurará tener la instancia del ViewModel correcta
 class RegistrosViewModelFactory(private val repository: RegistrosRepository) : ViewModelProvider.Factory {
 
     override fun <T : ViewModel> create(modelClass: Class<T>): T {

@@ -21,7 +21,11 @@
     <fragment
         android:id="@+id/expenseAdderFragment"
         android:name="com.example.uf1_proyecto.view.ExpenseAdderFragment"
-        android:label="@string/expense_add_text" />
+        android:label="@string/expense_add_text" >
+        <action
+            android:id="@+id/action_expenseAdderFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/expenseFragment"
         android:name="com.example.uf1_proyecto.view.ExpenseFragment"
