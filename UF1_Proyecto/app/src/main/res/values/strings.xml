@@ -4,6 +4,7 @@
     <string name="expenseWord">Gastos</string>
     <string name="incomeWord">Ingresos</string>
     <string name="balanceWord">Balance</string>
+    <string name="totalWord">Total</string>
     <string name="expense_add_text">Registrar Una Entrada</string>
 
     <string name="hint_expense_name">Nombre del gasto</string>

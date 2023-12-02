@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.uf1_proyecto.MainActivity
 import com.example.uf1_proyecto.R
 import com.example.uf1_proyecto.databinding.FragmentHomeBinding
@@ -39,9 +40,15 @@ class HomeFragment : Fragment() {
             findNavController().navigate(R.id.action_homeFragment_to_expenseAdderFragment)
         }
 
-
-        // Devolver la vista
         val adapter = RegistrosAdapter()
+        binding.recyclerView.adapter=adapter
+
+        val layoutManager = LinearLayoutManager(requireContext())
+        layoutManager.orientation = LinearLayoutManager.VERTICAL
+        layoutManager.reverseLayout = true
+        layoutManager.stackFromEnd = true // Esto asegura que las vistas se apilen desde el final
+        binding.recyclerView.layoutManager= layoutManager
+
         // Configuramos el observador para el viewmodel
         registrosViewModel.todosRegistros.observe(viewLifecycleOwner, Observer { registros ->
             registros?.let {
@@ -50,6 +57,7 @@ class HomeFragment : Fragment() {
             }
         })
 
+        // Devolver la vista
         return view
     }
 
@@ -70,8 +78,14 @@ class HomeFragment : Fragment() {
         ).substring(2)
 
         // Obtener los datos reales de la base de datos
-        val expenseTotal = registros.sumByDouble { if (it.category == "Expense") it.amount else 0.0 }
-        val incomeTotal = registros.sumByDouble { if (it.category == "Income") it.amount else 0.0 }
+        val expenseTotal = registros.sumOf {
+            when (it.category) {
+                "Shopping", "House", "Vehicle", "Other" -> it.amount
+                else -> 0.0
+            }
+        }
+
+        val incomeTotal = registros.sumOf { if (it.category == "Income") it.amount else 0.0 }
 
         // Modelo de datos para el chart
         return AAChartModel()
@@ -85,7 +99,7 @@ class HomeFragment : Fragment() {
             .series(
                 arrayOf(
                     AASeriesElement()
-                        .name("Total")
+                        .name(getString(R.string.totalWord))
                         .data(arrayOf(expenseTotal, incomeTotal))
                 )
             )

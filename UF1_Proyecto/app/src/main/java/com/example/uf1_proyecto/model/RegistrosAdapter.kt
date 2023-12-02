@@ -3,13 +3,14 @@ package com.example.uf1_proyecto.model
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
-import androidx.recyclerview.widget.RecyclerView
-import com.example.uf1_proyecto.R
-import com.example.uf1_proyecto.model.Registro
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
+import androidx.recyclerview.widget.RecyclerView
+import com.example.uf1_proyecto.R
+import java.text.NumberFormat
+import java.util.Locale
+
 
 class RegistrosAdapter : ListAdapter<Registro, RegistrosAdapter.RegistroViewHolder>(RegistroDiffCallback()) {
 
@@ -24,7 +25,9 @@ class RegistrosAdapter : ListAdapter<Registro, RegistrosAdapter.RegistroViewHold
         // Asignar valores a las vistas según los datos del modelo
         holder.mainTextView.text = registro.name
         holder.secondaryTextView.text = registro.description
-        holder.amountTextView.text = registro.amount.toString()
+        //Utilizamos numberformat para darle un formato monetario apropiado
+        val format: NumberFormat = NumberFormat.getCurrencyInstance(Locale.getDefault())
+        holder.amountTextView.text = format.format(registro.amount)
     }
 
     class RegistroViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

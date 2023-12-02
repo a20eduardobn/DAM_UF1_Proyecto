@@ -32,9 +32,7 @@
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:clipToPadding="false"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
+            android:paddingTop="15dp"
             android:background="@drawable/round_tops_background"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_behavior="@string/appbar_scrolling_view_behavior" />
@@ -50,6 +48,7 @@
         app:backgroundTint="@color/accent_color_primaryDark"
         app:fabSize="normal"
         />
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

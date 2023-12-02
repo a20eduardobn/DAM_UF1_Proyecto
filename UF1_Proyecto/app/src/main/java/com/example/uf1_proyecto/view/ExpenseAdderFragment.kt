@@ -30,7 +30,6 @@ class ExpenseAdderFragment : Fragment() {
         _binding = FragmentExpenseAdderBinding.inflate(inflater, container, false)
         val view = binding.root
         registrosViewModel = (activity as MainActivity).registrosViewModel
-
         binding.fabSendExpense.setOnClickListener {
             leerDatos()
         }
@@ -50,19 +49,25 @@ class ExpenseAdderFragment : Fragment() {
             Toast.makeText(context, mensaje, Toast.LENGTH_SHORT).show()
         } else {
             // Si no hay campos vacíos, se envían los datos al ViewModel
-            val resultado =
-                binding.nameEditTextExpense.text.toString() + "," +
-                        binding.amountEditTextExpense.text.toString() + "," +
-                        binding.descriptionEditTextExpense.text.toString() + "," +
-                        binding.chipGroupExpenseType.checkedChipId
+            val name = binding.nameEditTextExpense.text.toString()
+            val amount = binding.amountEditTextExpense.text.toString().toDoubleOrNull() ?: 0.0
+            val description = binding.descriptionEditTextExpense.text.toString()
+            val categoryId = binding.chipGroupExpenseType.checkedChipId
 
-            val datos = resultado.split(",")
+            val category = when (categoryId) {
+                R.id.chipShopping -> "Shopping"
+                R.id.chipHouse -> "House"
+                R.id.chipVehicle -> "Vehicle"
+                R.id.chipOther -> "Other"
+                else -> "DefaultCategory"
+            }
+
             val registro = Registro(
-                id = 0, // El id no es relevante, puesto que se genera automaticamente
-                name = datos[0],
-                description = datos[2],
-                amount = datos[1].toDoubleOrNull() ?: 0.0,
-                category = datos[3],
+                id = 0,
+                name = name,
+                description = description,
+                amount = amount,
+                category = category,
                 date = obtenerFecha()
             )
 

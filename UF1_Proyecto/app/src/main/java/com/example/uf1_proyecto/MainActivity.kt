@@ -33,14 +33,16 @@ class MainActivity : AppCompatActivity() {
         val navhostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController = navhostFragment.navController
 
-        val builderApp = AppBarConfiguration.Builder(navController.graph)
+        val builderApp = AppBarConfiguration.Builder(R.id.homeFragment, R.id.expenseFragment, R.id.incomeFragment)
         val configurationApp = builderApp.build()
 
         binding.toolbar.setupWithNavController(navController, configurationApp)
 
+
         //Se actualiza el titulo del toolbar para evitar que se muestre el nombre de la aplicacion
         supportActionBar?.title = getString(R.string.monthly_balance_text)
 
+        //Se prepara la bottombar con la navegacion
         binding.bottomNavigation.setupWithNavController(navController)
         binding.bottomNavigation.setOnItemSelectedListener { item ->
             when (item.itemId) {

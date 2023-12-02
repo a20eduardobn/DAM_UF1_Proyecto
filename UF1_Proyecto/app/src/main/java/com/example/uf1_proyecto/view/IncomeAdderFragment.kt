@@ -5,11 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.core.view.get
 import androidx.fragment.app.Fragment
-import com.example.uf1_proyecto.controller.Controller
 import com.example.uf1_proyecto.R
-import com.example.uf1_proyecto.databinding.FragmentExpenseAdderBinding
 import com.example.uf1_proyecto.databinding.FragmentIncomeAdderBinding
 
 class IncomeAdderFragment : Fragment() {
