@@ -80,7 +80,7 @@ class ExpenseAdderFragment : Fragment() {
     @SuppressLint("SimpleDateFormat")
     fun obtenerFecha(): String{
         val currentTime = Calendar.getInstance().time
-        val dateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
+        val dateFormat = SimpleDateFormat("dd/MM/yyyy")
         return dateFormat.format(currentTime)
     }
 

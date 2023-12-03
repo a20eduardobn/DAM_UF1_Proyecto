@@ -36,18 +36,14 @@ class HomeFragment : Fragment() {
         val view = binding.root
         registrosViewModel = (activity as MainActivity).registrosViewModel
 
-        binding.fabAddTransaction.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_expenseAdderFragment)
-        }
-
         val adapter = RegistrosAdapter()
-        binding.recyclerView.adapter=adapter
+        binding.mainRecyclerView.adapter=adapter
 
         val layoutManager = LinearLayoutManager(requireContext())
         layoutManager.orientation = LinearLayoutManager.VERTICAL
         layoutManager.reverseLayout = true
         layoutManager.stackFromEnd = true // Esto asegura que las vistas se apilen desde el final
-        binding.recyclerView.layoutManager= layoutManager
+        binding.mainRecyclerView.layoutManager= layoutManager
 
         // Configuramos el observador para el viewmodel
         registrosViewModel.todosRegistros.observe(viewLifecycleOwner, Observer { registros ->

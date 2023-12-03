@@ -15,11 +15,12 @@
     <color name="background_dark_gray">#bdc3c7</color>
 
     <!-- Color para los ingresos -->
-    <color name="chart_color_green">#2ecc71</color>
+    <color name="color_income">#2ecc71</color>
 
     <!-- Colores para los tipos de gastos -->
-    <color name="color_shopping_expense">#e74c3c</color>
-    <color name="color_house_expense">#f39c12</color>
+
+    <color name="color_shopping_expense">#f39c12</color>
+    <color name="color_house_expense">#e74c3c</color>
     <color name="color_vehicle_expense">#9b59b6</color>
     <color name="color_other_expense">#34495e</color>
 </resources>

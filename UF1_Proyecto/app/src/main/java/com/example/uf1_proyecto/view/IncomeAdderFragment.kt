@@ -7,11 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.uf1_proyecto.MainActivity
 import com.example.uf1_proyecto.R
-import com.example.uf1_proyecto.databinding.FragmentExpenseAdderBinding
 import com.example.uf1_proyecto.databinding.FragmentIncomeAdderBinding
 import com.example.uf1_proyecto.model.Registro
 import com.example.uf1_proyecto.model.RegistrosViewModel
@@ -70,7 +68,7 @@ class IncomeAdderFragment : Fragment() {
     @SuppressLint("SimpleDateFormat")
     fun obtenerFecha(): String{
         val currentTime = Calendar.getInstance().time
-        val dateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
+        val dateFormat = SimpleDateFormat("dd/MM/yyyy")
         return dateFormat.format(currentTime)
     }
 

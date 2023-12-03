@@ -3,16 +3,16 @@
     <item
         android:id="@+id/item_balance"
         android:enabled="true"
-        android:icon="@drawable/ic_house"
+        android:icon="@drawable/ic_balance"
         android:title="@string/balanceWord"/>
     <item
         android:id="@+id/item_income"
         android:enabled="true"
-        android:icon="@drawable/ic_house"
+        android:icon="@drawable/ic_money_in"
         android:title="@string/incomeWord"/>
     <item
         android:id="@+id/item_expense"
         android:enabled="true"
-        android:icon="@drawable/ic_house"
+        android:icon="@drawable/ic_money_out"
         android:title="@string/expenseWord"/>
 </menu>

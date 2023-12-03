@@ -1,27 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">UF1_Proyecto</string>
-    <string name="monthly_balance_title">Balance Mensual</string>
-    <string name="expenseWord">Gastos</string>
-    <string name="incomeWord">Ingresos</string>
+    <string name="app_name">UF1_Project</string>
+    <string name="monthly_balance_title">Balance</string>
+    <string name="expenseWord">Expenses</string>
+    <string name="incomeWord">Income</string>
     <string name="balanceWord">Balance</string>
     <string name="totalWord">Total</string>
-    <string name="expense_add_text">Registrar Una Entrada</string>
-    <string name="income_fragment_title">Tus ingresos</string>
-    <string name="expense_fragment_title">Tus gastos</string>
+    <string name="expense_add_text">Add Expense</string>
+    <string name="income_fragment_title">Your Incomes</string>
+    <string name="expense_fragment_title">Your Expenses</string>
+    <string name="income_adder_title">Add Income</string>
 
-    <string name="hint_expense_name">Nombre del gasto</string>
-    <string name="hint_description">Descripción</string>
-    <string name="hint_expense_amount">Importe</string>
-    <string name="hint_income_name">Nombre del ingreso</string>
+    <string name="hint_expense_name">Expense Name</string>
+    <string name="hint_description">Description</string>
+    <string name="hint_expense_amount">Amount</string>
+    <string name="hint_income_name">Income Name</string>
 
-    <string name="label_chip_shopping">Compras</string>
-    <string name="label_chip_house">Vivienda</string>
-    <string name="label_chip_vehicle">Vehiculo</string>
-    <string name="label_chip_other">Otros</string>
+    <string name="label_chip_shopping">Shopping</string>
+    <string name="label_chip_house">Housing</string>
+    <string name="label_chip_vehicle">Vehicle</string>
+    <string name="label_chip_other">Others</string>
 
-    <string name="toast_form_empty">Por favor, rellena todos los campos.</string>
-    <string name="toast_empty_notsaved">Error al guardar</string>
-    <string name="btn_confirm">Confirmar</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
+    <string name="toast_form_empty">Please, fill in all fields.</string>
+    <string name="toast_empty_notsaved">Error saving</string>
+    <string name="btn_confirm">Confirm</string>
 </resources>

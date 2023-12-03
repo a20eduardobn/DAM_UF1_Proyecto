@@ -7,20 +7,30 @@
     android:layout_height="wrap_content"
     android:layout_marginRight="20dp"
     android:layout_marginLeft="20dp"
-    android:layout_marginBottom="20dp"
+    android:layout_marginTop="20dp"
     android:background="@drawable/round_background_gray"
     android:padding="16dp">
+
+    <!-- ImageView a la izquierda -->
+    <ImageView
+        android:id="@+id/categoryImageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_other_category"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Texto principal -->
     <TextView
         android:id="@+id/mainTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="12dp"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/amountTextView"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/categoryImageView"
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Texto secundario -->
@@ -28,13 +38,13 @@
         android:id="@+id/secondaryTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="12dp"
         android:textSize="12sp"
         app:layout_constraintEnd_toStartOf="@+id/amountTextView"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/categoryImageView"
         app:layout_constraintTop_toBottomOf="@+id/mainTextView" />
 
-    <!-- Importe monetario a la derecha -->
+    <!-- Importe monetario arriba del campo de fecha -->
     <TextView
         android:id="@+id/amountTextView"
         android:layout_width="wrap_content"
@@ -42,7 +52,16 @@
         android:layout_marginStart="8dp"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Campo de fecha debajo del importe -->
+    <TextView
+        android:id="@+id/dateTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amountTextView" />
 </androidx.constraintlayout.widget.ConstraintLayout>
