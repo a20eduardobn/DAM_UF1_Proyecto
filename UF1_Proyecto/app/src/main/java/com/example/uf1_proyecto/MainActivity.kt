@@ -2,7 +2,6 @@ package com.example.uf1_proyecto
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.activity.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
@@ -40,7 +39,7 @@ class MainActivity : AppCompatActivity() {
 
 
         //Se actualiza el titulo del toolbar para evitar que se muestre el nombre de la aplicacion
-        supportActionBar?.title = getString(R.string.monthly_balance_text)
+        supportActionBar?.title = getString(R.string.monthly_balance_title)
 
         //Se prepara la bottombar con la navegacion
         binding.bottomNavigation.setupWithNavController(navController)

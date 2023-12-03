@@ -63,7 +63,7 @@ class ExpenseAdderFragment : Fragment() {
             }
 
             val registro = Registro(
-                id = 0,
+                id = 0, //El id no es importante, se autogenera al insertar el registro
                 name = name,
                 description = description,
                 amount = amount,

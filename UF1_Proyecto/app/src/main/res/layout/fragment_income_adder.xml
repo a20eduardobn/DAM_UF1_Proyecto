@@ -24,7 +24,7 @@
             android:layout_height="wrap_content">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/nameEditTextExpense"
+                android:id="@+id/nameEditTextIncome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/hint_income_name"
@@ -39,7 +39,7 @@
             android:layout_marginTop="8dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/descriptionEditTextExpense"
+                android:id="@+id/descriptionEditTextIncome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/hint_description"
@@ -54,7 +54,7 @@
             android:layout_marginTop="8dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/amountEditTextExpense"
+                android:id="@+id/amountEditTextIncome"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:hint="@string/hint_expense_amount"
@@ -62,7 +62,7 @@
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabSendExpense"
+        android:id="@+id/fabSendIncome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
